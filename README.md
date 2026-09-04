@@ -26,11 +26,11 @@ The website will stay small enough to finish within a short project timeline.
 - Docker, EC2, Kubernetes, Terraform, or CI/CD
 - AWS setup in this first step (that comes later)
 
-Website files will be added in a later step. This repository currently holds the project description and folder layout only.
+The first working version of the website is in the `site/` folder. It runs locally and has not been deployed to AWS yet.
 
 ## Technologies
 
-These are the tools planned for the project. Only Git and GitHub are in use so far.
+These are the tools planned for the project. HTML, CSS, Git, and GitHub are in use so far. Amazon S3 will be added later.
 
 | Technology | Role |
 | --- | --- |
@@ -55,5 +55,48 @@ That is enough to explain basic cloud storage and static deployment to a reviewe
 Cloud-project/
 ├── README.md      # Project description (this file)
 ├── .gitignore     # Ignore OS files and accidental secrets
-└── site/          # Static website files will be added here later
+└── site/
+    ├── index.html # Portfolio page
+    └── style.css  # Simple styling
 ```
+
+## Day 2 Progress
+
+The first working local version of the website is now in the repository.
+
+**What was implemented**
+
+- A valid HTML5 page with header, about, skills, education, and contact sections
+- A small stylesheet so the page is readable (not a polished design)
+
+**Where the website files are located**
+
+- `site/index.html`
+- `site/style.css`
+
+**How the website was tested locally**
+
+From the `site/` folder:
+
+```text
+python -m http.server 8000
+```
+
+Then open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in a browser. You can also open `site/index.html` directly in a browser.
+
+**What the current website contains**
+
+- Name and role
+- A short about paragraph
+- A skills list
+- A short education note
+- Email and GitHub contact links
+
+**What remains for future days**
+
+- Improve the page if needed
+- Create an S3 bucket
+- Upload the site files
+- Enable S3 static website hosting
+
+The website currently runs locally and has not yet been deployed to AWS.
