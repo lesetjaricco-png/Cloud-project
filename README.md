@@ -26,7 +26,7 @@ The website will stay small enough to finish within a short project timeline.
 - Docker, EC2, Kubernetes, Terraform, or CI/CD
 - AWS setup in this first step (that comes later)
 
-The first working version of the website is in the `site/` folder. It runs locally and has not been deployed to AWS yet.
+The website is in the `site/` folder. It uses HTML and CSS, runs locally, and has not been deployed to AWS yet.
 
 ## Technologies
 
@@ -53,11 +53,14 @@ That is enough to explain basic cloud storage and static deployment to a reviewe
 
 ```text
 Cloud-project/
-├── README.md      # Project description (this file)
-├── .gitignore     # Ignore OS files and accidental secrets
+├── README.md
+├── .gitignore
+├── screenshots/
+│   ├── day3-desktop.png
+│   └── day3-mobile.png
 └── site/
-    ├── index.html # Portfolio page
-    └── style.css  # Simple styling
+    ├── index.html
+    └── style.css
 ```
 
 ## Day 2 Progress
@@ -97,6 +100,46 @@ Then open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in a browser. You can
 - Improve the page if needed
 - Create an S3 bucket
 - Upload the site files
+- Enable S3 static website hosting
+
+The website currently runs locally and has not yet been deployed to AWS.
+
+## Day 3 Progress
+
+CSS was added and the visual design was improved. The site is still a single static page (HTML + CSS only).
+
+**What changed**
+
+- The page now has a dark header with in-page navigation
+- Content sits in simple cards with clearer spacing and typography
+- Skills are shown as labels; contact details are easier to scan
+- A media query stacks the header on narrower screens
+
+**How it was tested locally**
+
+From the `site/` folder:
+
+```text
+python -m http.server 8080 --bind 127.0.0.1
+```
+
+Then open [http://127.0.0.1:8080/](http://127.0.0.1:8080/) in a browser.
+
+(`8080` was used because port `8000` was already in use on this machine. The usual command is `python -m http.server 8000`.)
+
+Checks:
+
+- HTML and CSS both loaded
+- About, Skills, Education, and Contact were visible
+- The Contact nav link jumped to `#contact`
+- At 375px width the header stacked and the page did not scroll sideways
+
+Screenshots from that local test are in `screenshots/`.
+
+**What remains for later days**
+
+- Create an S3 bucket
+- Upload the `site/` files
 - Enable S3 static website hosting
 
 The website currently runs locally and has not yet been deployed to AWS.

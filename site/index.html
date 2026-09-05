@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <h1>Lesetja M. Moloto</h1>
-      <p>Software Developer</p>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <h1>Lesetja M. Moloto</h1>
+          <p class="tagline">Software Developer</p>
+        </div>
+        <nav aria-label="Page sections">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section id="about">
+    <main class="page">
+      <section id="about" class="card">
         <h2>About</h2>
         <p>
           I am a software developer working on a Cloud Computing mini-project.
@@ -21,9 +33,9 @@
         </p>
       </section>
 
-      <section id="skills">
+      <section id="skills" class="card">
         <h2>Skills</h2>
-        <ul>
+        <ul class="skill-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>Git and GitHub</li>
@@ -31,27 +43,31 @@
         </ul>
       </section>
 
-      <section id="education">
+      <section id="education" class="card">
         <h2>Education</h2>
         <p>Currently completing a Cloud Computing elective mini-project.</p>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="card">
         <h2>Contact</h2>
-        <ul>
+        <ul class="contact-list">
           <li>
-            Email:
-            <a href="mailto:lesetjaricco@gmail.com">lesetjaricco@gmail.com</a>
+            <a class="contact-link" href="mailto:lesetjaricco@gmail.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">lesetjaricco@gmail.com</span>
+            </a>
           </li>
           <li>
-            GitHub:
-            <a href="https://github.com/lesetjaricco-png">github.com/lesetjaricco-png</a>
+            <a class="contact-link" href="https://github.com/lesetjaricco-png">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/lesetjaricco-png</span>
+            </a>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>Personal portfolio website. Currently running locally. Not yet deployed to AWS.</p>
     </footer>
   </body>
