@@ -1,5 +1,7 @@
 # Personal Portfolio Website on AWS S3
 
+**Code:** `WTC-A2FA7GWC`
+
 A small Cloud Computing mini-project: a simple personal portfolio website, later published with Amazon S3 static website hosting.
 
 ## Objective
